@@ -47,8 +47,8 @@ public class ParseListToExcelSheet<T> {
                                 setCellValue(cell, o);
                             }
                         }
+                        rowId++;
                     }
-                    rowId++;
                 }
             }
             workbook.write(outputStream);
