@@ -29,7 +29,7 @@ public class ExportStudentsToExcelTest {
         setMappings();
 
         excelType = ExcelType.XLS;
-        fileOutputStream = new FileOutputStream(new File("c:\\test.xls"));
+        fileOutputStream = new FileOutputStream(new File("./test.xls"));
 
 
 
@@ -52,7 +52,7 @@ public class ExportStudentsToExcelTest {
 
     @After
     public void tearDown() throws Exception {
-        File file = new File("c:\\test.xls");
+        File file = new File("./test.xls");
         if (file.exists()) {
             file.delete();
         }
@@ -68,6 +68,10 @@ public class ExportStudentsToExcelTest {
         student.setNo(10);
         students = new ArrayList<Student>();
         students.add(student);
+        students.add(student);
+        students.add(student);
+
+
     }
 
     private void setMappings() {
